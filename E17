@@ -13,7 +13,7 @@ public class E17 : MonoBehaviour
     }
     bool CanOpenDoor(bool masterKey, bool normalKey, int level, bool enemyNear)
     {
-        return (masterKey && !enemyNear) ? true : (normalKey && level >= 5 && !enemyNear) ? true : false;
+        return (masterKey && !enemyNear) ? true : (normalKey && level >= 5) ? true : false;
     }
     
     void Update()
