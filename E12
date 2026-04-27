@@ -1,0 +1,25 @@
+using UnityEngine;
+
+public class E12 : MonoBehaviour
+{
+    string acceso;
+    bool tieneVip;
+    int nivel;
+    bool enCombate;
+
+    void Start()
+    {
+        if (((nivel >= 10) || (tieneVip)) && (!enCombate))
+            acceso = "Acceso permitido";
+        else
+            acceso = "Acceso denegado";
+
+        acceso = (((nivel >= 10) || (tieneVip)) && (!enCombate)) ? "Acceso permitido" : "Acceso denegado";
+    }
+
+   
+    void Update()
+    {
+        
+    }
+}
