@@ -1,0 +1,24 @@
+using UnityEngine;
+
+public class E20 : MonoBehaviour
+{   int health;
+    int mana;
+    bool enemyNear;
+    bool hasPotion;
+    string estadoBotAliado;
+    
+    void Start()
+    {
+        EvaluateAction(health, mana, enemyNear, hasPotion);
+    }
+    string EvaluateAction (int health, int mana, bool enemyNear, bool hasPotion)
+    {
+        return estadoBotAliado = (enemyNear && health > 40) ? "Attack" : (enemyNear && health <= 40 && hasPotion) ? "Heal" :
+        (enemyNear && health <= 20 && !hasPotion) ? "Escape" : "Wait";
+    }
+    
+    void Update()
+    {
+        
+    }
+}
