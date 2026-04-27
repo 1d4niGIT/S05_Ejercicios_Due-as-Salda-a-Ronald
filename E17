@@ -1,0 +1,23 @@
+using UnityEngine;
+
+public class E17 : MonoBehaviour
+{
+    bool masterKey;
+    bool normalKey;
+    int level;
+    bool enemyNear;
+    
+    void Start()
+    {
+        CanOpenDoor(masterKey,normalKey,level,enemyNear);
+    }
+    bool CanOpenDoor(bool masterKey, bool normalKey, int level, bool enemyNear)
+    {
+        return (masterKey && !enemyNear) ? true : (normalKey && level >= 5 && !enemyNear) ? true : false;
+    }
+    
+    void Update()
+    {
+        
+    }
+}
