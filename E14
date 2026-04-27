@@ -1,0 +1,18 @@
+using UnityEngine;
+
+public class E14 : MonoBehaviour
+{
+    bool enemigoVulnerable;
+    bool esCritico;
+    float daño;
+    void Start()
+    {
+        daño = (esCritico && enemigoVulnerable) ? daño * 2 : (esCritico) ? daño * 1.5f : daño;
+    }
+
+    
+    void Update()
+    {
+        
+    }
+}
