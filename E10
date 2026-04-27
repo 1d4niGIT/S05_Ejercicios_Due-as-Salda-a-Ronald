@@ -1,0 +1,23 @@
+using UnityEngine;
+
+public class E10 : MonoBehaviour
+{
+    bool viendoJugador;
+    bool estaCerca;
+    
+    void Start()
+    {
+        if (viendoJugador && estaCerca)
+            Debug.Log("Atacar");
+        else if (viendoJugador && !estaCerca)
+            Debug.Log("Perseguir");
+        else 
+            Debug.Log("Patrullar");
+    }
+
+    
+    void Update()
+    {
+        
+    }
+}
