@@ -13,10 +13,12 @@ public class E20 : MonoBehaviour
     }
     string EvaluateAction (int health, int mana, bool enemyNear, bool hasPotion)
     {
-        return estadoBotAliado = (enemyNear && health > 40) ? "Attack" : (enemyNear && health <= 40 && hasPotion) ? "Heal" :
-        (enemyNear && health <= 20 && !hasPotion) ? "Escape" : "Wait";
+        return estadoBotAliado = (enemyNear && health > 40) ? "Attack" : (health <= 40 && hasPotion) ? "Heal" :
+        ( health <= 20 && !hasPotion) ? "Escape" : "Wait"; 
+
     }
     
+
     void Update()
     {
         
