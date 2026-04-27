@@ -1,0 +1,20 @@
+using UnityEngine;
+
+public class E16 : MonoBehaviour
+{   int health;
+    int stamina;
+    string state;
+    
+    void Start()
+    {
+        GetPlayerState(health, stamina);
+    }
+    string GetPlayerState(int health, int stamina)
+    {
+        return state = (health <= 0) ? "Dead" : (stamina < 20) ? "Tired" : "Ready";
+    }
+    void Update()
+    {
+        
+    }
+}
