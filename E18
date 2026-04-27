@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class E18 : MonoBehaviour
+{
+    float distance;
+    string distanciaEnemigo;
+    
+    void Start()
+    {
+        GetAttackType(distance);
+    }
+    string GetAttackType(float distance)
+    {
+        return distanciaEnemigo = (distance < 2) ? "Melee" : (distance < 8) ? "Range" : "Idle";
+    }
+    
+    void Update()
+    {
+        
+    }
+}
