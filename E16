@@ -1,13 +1,15 @@
 using UnityEngine;
 
 public class E16 : MonoBehaviour
-{   int health;
-    int stamina;
+{
+    public int health;
+    public int stamina;
     string state;
-    
+
     void Start()
     {
         GetPlayerState(health, stamina);
+        Debug.Log(state);
     }
     string GetPlayerState(int health, int stamina)
     {
@@ -15,6 +17,6 @@ public class E16 : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
 }
