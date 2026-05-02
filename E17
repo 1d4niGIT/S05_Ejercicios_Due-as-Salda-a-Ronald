@@ -2,22 +2,24 @@ using UnityEngine;
 
 public class E17 : MonoBehaviour
 {
-    bool masterKey;
-    bool normalKey;
-    int level;
-    bool enemyNear;
-    
+    public bool masterKey;
+    public bool normalKey;
+    public int level;
+    public bool enemyNear;
+    bool puedeabrirPuerta;
+
     void Start()
     {
-        CanOpenDoor(masterKey,normalKey,level,enemyNear);
+        CanOpenDoor(masterKey, normalKey, level, enemyNear);
+        Debug.Log(puedeabrirPuerta);
     }
     bool CanOpenDoor(bool masterKey, bool normalKey, int level, bool enemyNear)
     {
-        return (masterKey && !enemyNear) ? true : (normalKey && level >= 5) ? true : false;
+        return puedeabrirPuerta = (masterKey && !enemyNear) ? true : (normalKey && level >= 5) ? true : false;
     }
-    
+
     void Update()
     {
-        
+
     }
 }
