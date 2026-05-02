@@ -2,23 +2,24 @@ using UnityEngine;
 
 public class E11 : MonoBehaviour
 {
-    string estado;
-    int vida;
-    
+    public string estado;
+    public int vida;
+
     void Start()
     {
         if (vida < 20)
             estado = "Crítico";
-        else if (vida >= 20 && vida <=50)
+        else if (vida >= 20 && vida <= 50)
             estado = "Herido";
         else
             estado = "Estable";
 
-        estado = (vida < 20) ? "Crítico" : ((vida >= 20) && (vida <=50)) ? "Herido" : "Estable";
+        estado = (vida < 20) ? "Crítico" : ((vida >= 20) && (vida <= 50)) ? "Herido" : "Estable";
+        Debug.Log(estado);
     }
-    
+
     void Update()
     {
-        
+
     }
 }
