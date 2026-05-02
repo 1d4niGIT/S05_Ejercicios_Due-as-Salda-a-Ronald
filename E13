@@ -3,15 +3,16 @@ using UnityEngine;
 public class E13 : MonoBehaviour
 {
     string estado;
-    int stamina;
+    public int stamina;
     void Start()
     {
         estado = (stamina > 70) ? "Sprint" : (stamina > 30) ? "Run" : "Walk";
+        Debug.Log(estado);
     }
 
-    
+
     void Update()
     {
-        
+
     }
 }
