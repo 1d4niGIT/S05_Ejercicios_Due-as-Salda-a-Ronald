@@ -2,21 +2,22 @@ using UnityEngine;
 
 public class E19 : MonoBehaviour
 {
-    int score;
-    int deaths;
+    public int score;
+    public int deaths;
     string puntajeFinal;
-    
+
     void Start()
     {
         GetRank(score, deaths);
+        Debug.Log(puntajeFinal);
     }
-    string GetRank (int score, int deaths)
+    string GetRank(int score, int deaths)
     {
         return puntajeFinal = (score > 500 && deaths == 0) ? "S" : (score > 300) ? "A" : "B";
     }
-   
+
     void Update()
     {
-        
+
     }
 }
