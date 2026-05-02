@@ -3,19 +3,20 @@ using UnityEngine;
 public class E15 : MonoBehaviour
 {
     string estadoEnemigo;
-    bool veJugador;
-    bool estaCerca;
-    bool tieneEnergia;
-    
+    public bool veJugador;
+    public bool estaCerca;
+    public bool tieneEnergia;
+
     void Start()
     {
         estadoEnemigo = (veJugador && tieneEnergia) ? "Perseguir" : (estaCerca && tieneEnergia) ? "Atacar" : "Esperar";
+        Debug.Log(estadoEnemigo);
 
     }
 
-    
+
     void Update()
     {
-        
+
     }
 }
