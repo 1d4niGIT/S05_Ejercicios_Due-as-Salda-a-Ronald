@@ -1,26 +1,28 @@
 using UnityEngine;
 
 public class E20 : MonoBehaviour
-{   int health;
-    int mana;
-    bool enemyNear;
-    bool hasPotion;
+{
+    public int health;
+    public int mana;
+    public bool enemyNear;
+    public bool hasPotion;
     string estadoBotAliado;
-    
+
     void Start()
     {
         EvaluateAction(health, mana, enemyNear, hasPotion);
+        Debug.Log(estadoBotAliado);
     }
-    string EvaluateAction (int health, int mana, bool enemyNear, bool hasPotion)
+    string EvaluateAction(int health, int mana, bool enemyNear, bool hasPotion)
     {
-        return estadoBotAliado = (enemyNear && health > 40) ? "Attack" : (health <= 40 && hasPotion) ? "Heal" :
-        ( health <= 20 && !hasPotion) ? "Escape" : "Wait"; 
+        return estadoBotAliado = (enemyNear && health > 40) ? "Attack" : (health <= 40 && hasPotion && mana>49) ? "Heal" :
+        (health <= 20 && !hasPotion) ? "Escape" : "Wait";
 
     }
-    
+
 
     void Update()
     {
-        
+
     }
 }
